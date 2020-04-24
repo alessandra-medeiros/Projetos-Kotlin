@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Calculador de mL</string>
+    <string name="lbl_txtView">Cerveja 1</string>
+    <string name="lbl_PrecoCvj1">Preço</string>
+    <string name="lbl_mLCvj1">mL</string>
+    <string name="lbl_TxtView2">=</string>
+    <string name="lbl_resultCvj1">0</string>
+    <string name="lbl_txtView3">Cerveja 2</string>
+    <string name="lbl_PrecoCvj2">Preço</string>
+    <string name="lbl_mLCvj2">mL</string>
+    <string name="lbl_resultCvj2">0</string>
+    <string name="lbl_btnCalcular">Calcular</string>
+    <string name="lbl_PrecoCvj3">Preço</string>
+    <string name="lbl_txtView5">Cerveja 3</string>
+    <string name="lbl_mLCvj3">mL</string>
+    <string name="lbl_resultCvj3">0</string>
+    <string name="resultText">0</string>
+    <string name="precoMissing">Ops, preço não preenchido</string>
+    <string name="mlMissing">Ops, mL não preenchido</string>
+</resources>

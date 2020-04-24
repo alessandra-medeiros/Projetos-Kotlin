@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">mL calculator</string>
+    <string name="lbl_txtView">Beer 1</string>
+    <string name="lbl_PrecoCvj1">Price</string>
+    <string name="lbl_mLCvj1">mL</string>
+    <string name="lbl_TxtView2">=</string>
+    <string name="lbl_resultCvj1">0</string>
+    <string name="lbl_txtView3">Beer 2</string>
+    <string name="lbl_PrecoCvj2">Price</string>
+    <string name="lbl_mLCvj2">mL</string>
+    <string name="lbl_resultCvj2">0</string>
+    <string name="lbl_btnCalcular">Calculate</string>
+    <string name="lbl_PrecoCvj3">Price</string>
+    <string name="lbl_txtView5">Beer 3</string>
+    <string name="lbl_mLCvj3">mL</string>
+    <string name="lbl_resultCvj3">0</string>
+    <string name="resultText">0</string>
+    <string name="precoMissing">Oops, price field is empty</string>
+    <string name="mlMissing">Oops, mL field is empty</string>
+</resources>

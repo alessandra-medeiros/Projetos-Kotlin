@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Conversor de Moedas</string>
+    <string name="lbl_LogoFoto">Logo</string>
+    <string name="lbl_USD">USD</string>
+    <string name="lbl_BRL">BRL</string>
+    <string name="lbl_Convert1">Converter</string>
+    <string name="lbl_Convert2">Converter</string>
+    <string name="lbl_Reset">Reset</string>
+</resources>

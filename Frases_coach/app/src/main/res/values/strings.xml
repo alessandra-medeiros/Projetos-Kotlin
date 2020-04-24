@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Frases de coach</string>
+    <string name="lbl_Gerar" />
+    <string name="lbl_FraseButton">Gerar frase</string>
+    <string name="lbl_GerarFrase">Gere uma frase</string>
+    <string name="lbl_CliqueBotao" />
+    <string name="lbl_Frase">Gere uma frase inspiradora</string>
+</resources>

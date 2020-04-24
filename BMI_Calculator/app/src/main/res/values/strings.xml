@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Calcule seu IMC</string>
+    <string name="lbl_Altura">Informe sua altura</string>
+    <string name="lbl_Peso">Informe seu peso</string>
+    <string name="lbl_Calcular">Calcular IMC</string>
+    <string name="lbl_Edt1">Seu IMC é:</string>
+    <string name="lbl_ResultadoIMC">(Seu resultado)</string>
+    <string name="lbl_Tabela">Tabela</string>
+    <string name="lbl_IMCTab">IMC</string>
+    <string name="lbl_Result">Resultado</string>
+    <string name="lbl_value1">Menos do que 18,5</string>
+    <string name="lbl_vaue2">Abaixo do peso</string>
+    <string name="lbl_value3">Entre 18,5 e 24,9</string>
+    <string name="lbl_value4">Peso normal</string>
+    <string name="lbl_value5">Entre 25 e 29,9</string>
+    <string name="lbl_value6">Sobrepeso</string>
+    <string name="lbl_value7">Entre 30 e 34,9</string>
+    <string name="lbl_value8">Obesidade grau 1</string>
+    <string name="lbl_value9">Entre 35 e 39,9</string>
+    <string name="lbl_value10">Obesidade grau 2</string>
+    <string name="lbl_value11">Mais do que 40</string>
+    <string name="lbl_value12">Obesidade grau 3</string>
+</resources>
