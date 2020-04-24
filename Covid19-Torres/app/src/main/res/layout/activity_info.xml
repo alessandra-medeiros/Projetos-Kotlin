@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info">
+
+    <TextView
+        android:id="@+id/tSuspeitos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/tSuspeitos"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tConfirmados"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tConfirmados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="96dp"
+        android:text="@string/tConfirmados"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tSuspeitos"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tDescartados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/tDescartados"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tMonitoramento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/tMonitoramento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="96dp"
+        android:text="@string/tMonitoramento"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tDescartados"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tCurados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/tCurados"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tIsoDomiciliar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/tIsoDomiciliar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="96dp"
+        android:text="@string/tIsoDomiciliar"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tCurados"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/tIsoHospitalar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/tIsoHospitalar"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tIsoHospitalarConf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/tIsoHospitalarConf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="96dp"
+        android:text="@string/tIsoHospitalarConf"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tIsoHospitalar"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/tMortes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="200dp"
+        android:text="@string/tMortes"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="117dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Suspeitos"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tSuspeitos" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Confirmados"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/tConfirmados" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="96dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Descartados"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tDescartados" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="43dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Monitoramento"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/tMonitoramento" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="75dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Curados"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tCurados" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="193dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Susp. em Iso. Domiciliar"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/tIsoDomiciliar" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="168dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="35dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Susp. em Iso. Hospitalar"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tIsoHospitalar" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="173dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="19dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Confir. em Iso. Hospitalar"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/tIsoHospitalarConf" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="84dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="163dp"
+        android:foregroundTint="#FFFFFF"
+        android:text="Mortes"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tMortes" />
+
+    <TextView
+        android:id="@+id/tHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="138dp"
+        android:text="@string/tHora"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tData"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/tData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="11dp"
+        android:text="@string/tData"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tHora"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
