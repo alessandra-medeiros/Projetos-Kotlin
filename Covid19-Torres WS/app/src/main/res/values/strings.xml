@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">Covid-19 Torres</string>
+  <string name="list_boletins">Lista de boletins</string>
+  <string name="tData">00/00/0000</string>
+  <string name="tHora">00:00</string>
+  <string name="iData">Data</string>
+  <string name="tSuspeitos">0</string>
+  <string name="tConfirmados">0</string>
+  <string name="tDescartados">0</string>
+  <string name="tMonitoramento">0</string>
+  <string name="tCurados">0</string>
+  <string name="tIsoDomiciliar">0</string>
+  <string name="tIsoHospitalar">0</string>
+  <string name="tIsoHospitalarConf">0</string>
+  <string name="tMortes">0</string>
+  <string name="iSuspeitos">Suspeitos</string>
+</resources>
