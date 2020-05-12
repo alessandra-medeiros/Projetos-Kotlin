@@ -10,6 +10,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_load_paises.*
 
@@ -22,14 +23,9 @@ class LoadPaises : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_load_paises)
         carregaDados()
-        rvDados.layoutManager = GridLayoutManager(this,2) as RecyclerView.LayoutManager?
+        rvDados.layoutManager = LinearLayoutManager(this)
         rvDados.itemAnimator = DefaultItemAnimator()
         rvDados.adapter = adapter
-
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Selecione um país para mais informações")
-        builder.setPositiveButton("Ok") { _: DialogInterface, i: Int -> }
-        builder.show()
     }
 
     fun showProgress(show: Boolean){

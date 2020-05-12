@@ -1,17 +1,14 @@
 package corona.world
 
 import android.annotation.SuppressLint
-import android.content.DialogInterface
 import android.os.AsyncTask
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_load_estados.*
 
 class LoadEstados : AppCompatActivity() {
@@ -23,14 +20,9 @@ class LoadEstados : AppCompatActivity() {
         setContentView(R.layout.activity_load_estados)
         carregaDados()
 
-        rvDados.layoutManager = GridLayoutManager(this,2) as RecyclerView.LayoutManager?
+        rvDados.layoutManager = LinearLayoutManager(this)
         rvDados.itemAnimator = DefaultItemAnimator()
         rvDados.adapter = adapter
-
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Selecione um estado para mais informações")
-        builder.setPositiveButton("Ok") { _: DialogInterface, i: Int -> }
-        builder.show()
     }
 
     fun showProgress(show: Boolean){

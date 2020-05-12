@@ -38,12 +38,11 @@ class AdapterPaises (private val countrys: List<Paises>): RecyclerView.Adapter<A
         holder.countryCaution.setBackgroundColor(setColor(country.cases))
     }
 
-
     class VH(itemView: View):RecyclerView.ViewHolder(itemView){
-        var countryName:TextView = itemView.pais
+        var countryName:TextView = itemView.itemEstado
         var countryCases:TextView = itemView.nCases
-        var countryDay:TextView = itemView.paisDia
-        var countryMonth:TextView = itemView.paisMes
+        var countryDay:TextView = itemView.itemDia
+        var countryMonth:TextView = itemView.itemMes
         var countryYear:TextView = itemView.itemAno
         var countryCaution:View = itemView.caution
     }

@@ -5,7 +5,7 @@ import android.net.ConnectivityManager
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
-import corona.world.Estados
+import corona.world.Inicio
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray
@@ -14,6 +14,7 @@ import java.io.IOException
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.concurrent.TimeUnit
+import kotlinx.android.synthetic.main.activity_inicio.*
 
 object HttpUF{
     val url ="https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/"

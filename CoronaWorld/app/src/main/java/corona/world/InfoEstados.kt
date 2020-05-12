@@ -22,7 +22,7 @@ class InfoEstados : AppCompatActivity() {
         casos.text = arrayEstados.cases.toString()
         mortes.text = arrayEstados.deaths.toString()
         suspeitos.text = arrayEstados.suspects.toString()
-        curados.text = arrayEstados.discards.toString()
+        descartados.text = arrayEstados.discards.toString()
     }
 
     fun selectMes(mes: String): String? {

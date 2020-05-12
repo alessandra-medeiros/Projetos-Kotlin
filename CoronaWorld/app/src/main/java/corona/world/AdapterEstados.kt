@@ -37,12 +37,11 @@ class AdapterEstados (private val states: List<Estados>): RecyclerView.Adapter<A
         holder.stateCaution.setBackgroundColor(setColor(state.cases))
     }
 
-
     class VH(itemView: View):RecyclerView.ViewHolder(itemView){
-        var stateName:TextView = itemView.estadoNome
+        var stateName:TextView = itemView.itemEstado
         var stateCases:TextView = itemView.nCases
-        var stateDay:TextView = itemView.estadoDia
-        var stateMonth:TextView = itemView.estadoMes
+        var stateDay:TextView = itemView.itemDia
+        var stateMonth:TextView = itemView.itemMes
         var stateYear:TextView = itemView.itemAno
         var stateCaution:View = itemView.caution
     }

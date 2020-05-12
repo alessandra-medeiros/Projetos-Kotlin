@@ -15,15 +15,14 @@
         <activity android:name=".LoadPaises"></activity>
         <activity android:name=".LoadEstados" />
         <activity android:name=".InfoPaises" />
-        <activity android:name=".Inicio" />
-        <activity android:name=".InfoEstados" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Inicio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".InfoEstados" />
     </application>
 
 </manifest>

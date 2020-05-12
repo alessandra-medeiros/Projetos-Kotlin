@@ -3,44 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="180dp">
+    android:layout_height="140dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="165dp"
-        android:layout_height="168dp"
+        android:layout_width="380dp"
+        android:layout_height="130dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="380dp"
             android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/itemDia"
                 android:layout_width="42dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center"
                 android:text="10"
-                android:textSize="28sp"
+                android:textSize="37sp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/itemEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="40dp"
+                android:text="Mato Grosso do Sul"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/itemDia"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/itemMes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="72dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="JAN"
-                app:layout_constraintBottom_toTopOf="@+id/itemAno"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/itemDia"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,54 +62,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="67dp"
-                android:layout_marginBottom="19dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="2020"
-                app:layout_constraintBottom_toTopOf="@+id/itemEstado"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/itemDia"
-                app:layout_constraintTop_toBottomOf="@+id/itemMes" />
-
-            <TextView
-                android:id="@+id/itemEstado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Mato Grosso do Sul"
-                android:textColor="@color/colorPrimary"
-                android:textFontWeight="@android:integer/config_longAnimTime"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.503" />
+                app:layout_constraintStart_toEndOf="@+id/itemMes"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/itemCasos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="29dp"
                 android:text="@string/casos"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.89" />
+                app:layout_constraintEnd_toStartOf="@+id/cardCaution"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardCaution"
-                android:layout_width="34dp"
+                android:layout_width="50dp"
                 android:layout_height="6dp"
-                android:layout_marginStart="19dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="38dp"
                 app:cardCornerRadius="12px"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cardView2"
-                app:layout_constraintStart_toEndOf="@+id/itemCasos"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.848">
+                app:layout_constraintEnd_toStartOf="@+id/nCases"
+                app:layout_constraintStart_toEndOf="@+id/itemCasos">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/caution"
@@ -106,34 +99,19 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView2"
+            <TextView
+                android:id="@+id/nCases"
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="115dp"
-                app:cardCornerRadius="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="174dp"
+                android:layout_marginBottom="35dp"
+                android:text="0"
+                android:textColor="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toEndOf="@+id/cardCaution" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/nCases"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textColor="@color/colorPrimary"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

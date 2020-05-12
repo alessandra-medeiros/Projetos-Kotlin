@@ -28,9 +28,9 @@ class Inicio : AppCompatActivity() {
         })
 
         btnProcurar.setOnClickListener(View.OnClickListener {
-            carregaDados()
-            val intent = Intent(this, LoadPaises::class.java)
-            this.startActivity(intent)
+                carregaDados()
+                val intent = Intent(this, LoadEstados::class.java)
+                this.startActivity(intent)
         })
     }
 
