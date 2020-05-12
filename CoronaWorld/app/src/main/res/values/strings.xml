@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Corona World Tour</string>
+    <string name="casos">Casos</string>
+    <string name="mortes">Mortes</string>
+    <string name="suspeitos">Suspeitos</string>
+    <string name="descartados">Descartados</string>
+    <string name="escolhaUm">Escolha uma opção abaixo:</string>
+    <string name="ufHint">Informe o UF de um estado</string>
+    <string name="todosEstados">Todos os estados</string>
+    <string name="todosPaises">Todos os países</string>
+    <string name="confirmados">Confirmados</string>
+    <string name="curados">Curados</string>
+</resources>
