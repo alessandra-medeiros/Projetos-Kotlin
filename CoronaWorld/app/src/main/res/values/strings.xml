@@ -6,8 +6,9 @@
     <string name="descartados">Descartados</string>
     <string name="escolhaUm">Escolha uma opção abaixo:</string>
     <string name="ufHint">Informe o UF de um estado</string>
-    <string name="todosEstados">Todos os estados</string>
-    <string name="todosPaises">Todos os países</string>
+    <string name="todosEstados">Lista de estados</string>
+    <string name="todosPaises">Lista de países</string>
     <string name="confirmados">Confirmados</string>
     <string name="curados">Curados</string>
+    <string name="uf">Pesquise por um código UF</string>
 </resources>

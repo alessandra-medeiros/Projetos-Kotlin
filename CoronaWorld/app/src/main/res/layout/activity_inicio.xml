@@ -7,75 +7,59 @@
     android:layout_height="match_parent"
     tools:context=".Inicio">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/escolhaUm"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnTodosOsEstados"
-        android:layout_width="355dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="78dp"
-        android:layout_marginEnd="28dp"
+        android:layout_width="185dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="@color/colorPrimary"
         android:text="@string/todosEstados"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/btnTodosOsPaises"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectUF" />
+        app:layout_constraintTop_toBottomOf="@+id/selectout" />
 
     <Button
         android:id="@+id/btnTodosOsPaises"
-        android:layout_width="355dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="259dp"
+        android:layout_width="185dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/colorPrimary"
         android:text="@string/todosPaises"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTodosOsEstados" />
-
-    <EditText
-        android:id="@+id/selectUF"
-        android:layout_width="276dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="9dp"
-        android:ems="10"
-        android:hint="@string/ufHint"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/btnProcurar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/selectout" />
 
     <ImageButton
         android:id="@+id/btnProcurar"
-        android:layout_width="42dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="42dp"
+        android:layout_width="50dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/selectUF"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/search" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/selectout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/selectUF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/uf"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
