@@ -28,9 +28,10 @@ class Inicio : AppCompatActivity() {
         })
 
         btnProcurar.setOnClickListener(View.OnClickListener {
-                carregaDados()
-                val intent = Intent(this, LoadEstados::class.java)
-                this.startActivity(intent)
+            val txt = selectUF.text
+            val intent = Intent(this, InfoEstados::class.java)
+            intent.putExtra("UF",txt)
+            this.startActivity(intent)
         })
     }
 

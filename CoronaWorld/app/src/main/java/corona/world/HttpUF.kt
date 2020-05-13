@@ -41,32 +41,27 @@ object HttpUF{
         val jsonString = response.body?.string()
 
         val jsonObject = JSONObject(jsonString)
-        val jsonArray = jsonObject.getJSONArray("")
 
-        return readState(jsonArray)
+        return readState(jsonObject)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun readState(json: JSONArray) : ArrayList<Estados> {
+    fun readState(json: JSONObject) : ArrayList<Estados> {
         val estados = arrayListOf<Estados>()
         try {
-            for (i in 0 .. json.length()-1) {
-                var js = json.getJSONObject(i)
-
-                val dia = formatarData(js.getString("datetime").substring(0,10))
-                val hora = js.getString("datetime").substring(11,16)
+                val dia = formatarData(json.getString("datetime").substring(0,10))
+                val hora = json.getString("datetime").substring(11,16)
 
                 var states = Estados(
-                    js.getString("state"),
-                    js.getInt("cases"),
-                    js.getInt("deaths"),
-                    js.getInt("suspects"),
-                    js.getInt("refuses"),
+                    json.getString("state"),
+                    json.getInt("cases"),
+                    json.getInt("deaths"),
+                    json.getInt("suspects"),
+                    json.getInt("refuses"),
                     dia,
                     hora
                 )
                 estados.add(states)
-            }
         }catch (e: IOException) {
             Log.e("Erro", "Impossivel ler JSON")
         }

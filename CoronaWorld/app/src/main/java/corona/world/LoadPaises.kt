@@ -71,7 +71,7 @@ class LoadPaises : AppCompatActivity() {
         private fun update(result: List<Paises>?){
             if(result != null){
                 listaPaises.clear()
-                listaPaises.addAll(result.reversed())
+                listaPaises.addAll(result)
             }else{
                 txtMsg.text = "Erro no carregamento"
             }
