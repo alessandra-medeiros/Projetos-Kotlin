@@ -7,29 +7,28 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_info_paises.view.*
 import kotlinx.android.synthetic.main.item.view.*
 
-class AdapterPaises (private val countrys: List<Paises>): RecyclerView.Adapter<AdapterPaises.VH>() {
+class AdapterPaises (private val paises: List<Paises>): RecyclerView.Adapter<AdapterPaises.VH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.item,parent,false)
         val vh = VH(v)
         vh.itemView.setOnClickListener {
             val intent = Intent(v.context, InfoPaises::class.java)
-            var arrayCountry = countrys[vh.adapterPosition]
-            intent.putExtra("País", arrayCountry)
+            var arrayPaises = paises[vh.adapterPosition]
+            intent.putExtra("País", arrayPaises)
             v.context.startActivity(intent)
         }
         return vh
     }
 
     override fun getItemCount(): Int {
-        return countrys.size
+        return paises.size
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
-        var country = countrys[position]
+        var country = paises[position]
         holder.countryName.text = country.country
         holder.countryCases.text = country.cases.toString()
         holder.countryDay.text = country.date.toString().substring(0,2)

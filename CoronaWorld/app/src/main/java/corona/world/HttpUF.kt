@@ -5,16 +5,13 @@ import android.net.ConnectivityManager
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
-import corona.world.Inicio
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.concurrent.TimeUnit
-import kotlinx.android.synthetic.main.activity_inicio.*
 
 object HttpUF{
     val url ="https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/"
@@ -27,26 +24,26 @@ object HttpUF{
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun loadState(uf:String): ArrayList<Estados> {
-        val state = OkHttpClient.Builder()
+    fun loadEstado(uf:String): ArrayList<Estados> {
+        val estado = OkHttpClient.Builder()
             .readTimeout(5, TimeUnit.SECONDS)
             .connectTimeout(10, TimeUnit.SECONDS)
             .build()
 
         val request = Request.Builder()
-            .url(url+"rs")
+            .url(url+uf)
             .build()
 
-        val response = state.newCall(request).execute()
+        val response = estado.newCall(request).execute()
         val jsonString = response.body?.string()
 
         val jsonObject = JSONObject(jsonString)
 
-        return readState(jsonObject)
+        return lerEstado(jsonObject)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun readState(json: JSONObject) : ArrayList<Estados> {
+    fun lerEstado(json: JSONObject) : ArrayList<Estados> {
         val estados = arrayListOf<Estados>()
         try {
                 val dia = formatarData(json.getString("datetime").substring(0,10))
@@ -57,13 +54,13 @@ object HttpUF{
                     json.getInt("cases"),
                     json.getInt("deaths"),
                     json.getInt("suspects"),
-                    json.getInt("refuses"),
+                    json.getInt("discards"),
                     dia,
                     hora
                 )
                 estados.add(states)
         }catch (e: IOException) {
-            Log.e("Erro", "Impossivel ler JSON")
+            Log.e("Erro", "Não foi possível ler.")
         }
         return estados
     }

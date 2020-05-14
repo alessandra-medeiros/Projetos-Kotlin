@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_info_estados.view.*
 import kotlinx.android.synthetic.main.item.view.*
 
 class AdapterEstados (private val states: List<Estados>): RecyclerView.Adapter<AdapterEstados.VH>() {
@@ -16,8 +15,8 @@ class AdapterEstados (private val states: List<Estados>): RecyclerView.Adapter<A
         val vh = VH(v)
         vh.itemView.setOnClickListener {
             val intent = Intent(v.context, InfoEstados::class.java)
-            var arrayStates = states[vh.adapterPosition]
-            intent.putExtra("Estado", arrayStates)
+            var arrayEstados = states[vh.adapterPosition]
+            intent.putExtra("Estado", arrayEstados)
             v.context.startActivity(intent)
         }
         return vh

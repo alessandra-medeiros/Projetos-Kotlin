@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.activity_info_estados.*
 import kotlinx.android.synthetic.main.activity_info_estados.estadoHora
 import kotlinx.android.synthetic.main.activity_info_estados.casos
 import kotlinx.android.synthetic.main.activity_info_estados.mortes
-import kotlinx.android.synthetic.main.activity_info_paises.*
 import kotlinx.android.synthetic.main.activity_load_estados.*
 
 class InfoEstados : AppCompatActivity() {
@@ -42,6 +41,62 @@ class InfoEstados : AppCompatActivity() {
             }
         }catch (e: Exception){
             e.message
+        }
+    }
+
+    fun carregaDados(){
+        listaEstados.clear()
+        if(listaEstados.isNotEmpty()){
+            Log.e("task","Tarefa rodando.")
+        }else{
+            if(asyncTask==null){
+                if(HttpEstados.hasConnection(this)){
+                    if(asyncTask?.status != AsyncTask.Status.RUNNING){
+                        asyncTask = StatesTask()
+                        asyncTask?.execute()
+                    }
+                }else{
+                    progressBar.visibility = View.GONE
+                }
+            }else if(asyncTask?.status==AsyncTask.Status.RUNNING){
+                Log.e("task","Tarefa rodando.")
+            }
+        }
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    inner class StatesTask: AsyncTask<Void, Void, List<Estados?>>(){
+        override fun onPreExecute() {
+            super.onPreExecute()
+            Log.e("task","Buscando tarefa.")
+        }
+
+        @RequiresApi(Build.VERSION_CODES.O)
+        override fun doInBackground(vararg params: Void?): List<Estados>? {
+            return HttpUF.loadEstado(uf)
+        }
+
+        private fun update(result: List<Estados>?){
+            if(result != null){
+                val arrayEstados = result.get(0)
+                estadoDia.text = arrayEstados.date.toString().substring(0,2)
+                estadoMes.text = selectMes(arrayEstados.date.toString())
+                estadoHora.text = arrayEstados.hour
+                estadoNome.text = arrayEstados.state
+                casos.text = arrayEstados.cases.toString()
+                mortes.text = arrayEstados.deaths.toString()
+                suspeitos.text = arrayEstados.suspects.toString()
+                descartados.text = arrayEstados.discards.toString()
+            }else{
+                txtMsg.text = "Erro no carregamento"
+            }
+            asyncTask = null
+        }
+
+        override fun onPostExecute(result: List<Estados?>?) {
+            super.onPostExecute(result)
+            Log.e("task","Tarefa executada.")
+            update(result as List<Estados>?)
         }
     }
 
@@ -86,61 +141,5 @@ class InfoEstados : AppCompatActivity() {
             }
         }
         return newString
-    }
-
-    fun carregaDados(){
-        listaEstados.clear()
-        if(listaEstados.isNotEmpty()){
-            Log.e("task","Tarefa rodando.")
-        }else{
-            if(asyncTask==null){
-                if(HttpEstados.hasConnection(this)){
-                    if(asyncTask?.status != AsyncTask.Status.RUNNING){
-                        asyncTask = StatesTask()
-                        asyncTask?.execute()
-                    }
-                }else{
-                    progressBar.visibility = View.GONE
-                }
-            }else if(asyncTask?.status==AsyncTask.Status.RUNNING){
-                Log.e("task","Tarefa rodando.")
-            }
-        }
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    inner class StatesTask: AsyncTask<Void, Void, List<Estados?>>(){
-        override fun onPreExecute() {
-            super.onPreExecute()
-            Log.e("task","Buscando tarefa.")
-        }
-
-        @RequiresApi(Build.VERSION_CODES.O)
-        override fun doInBackground(vararg params: Void?): List<Estados>? {
-            return HttpUF.loadState(uf)
-        }
-
-        private fun update(result: List<Estados>?){
-            if(result != null){
-                val arrayEstados = result.get(0)
-                estadoDia.text = arrayEstados.date.toString().substring(0,2)
-                estadoMes.text = selectMes(arrayEstados.date.toString())
-                estadoHora.text = arrayEstados.hour
-                estadoNome.text = arrayEstados.state
-                casos.text = arrayEstados.cases.toString()
-                mortes.text = arrayEstados.deaths.toString()
-                suspeitos.text = arrayEstados.suspects.toString()
-                descartados.text = arrayEstados.discards.toString()
-            }else{
-                txtMsg.text = "Erro no carregamento"
-            }
-            asyncTask = null
-        }
-
-        override fun onPostExecute(result: List<Estados?>?) {
-            super.onPostExecute(result)
-            Log.e("task","Tarefa executada.")
-            update(result as List<Estados>?)
-        }
     }
 }

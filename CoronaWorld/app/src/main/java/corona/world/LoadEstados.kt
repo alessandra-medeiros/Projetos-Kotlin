@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_load_estados.*
 class LoadEstados : AppCompatActivity() {
     private var listaEstados = arrayListOf<Estados>()
     private var adapter = AdapterEstados(listaEstados)
-    private var asyncTask : StatesTask? = null
+    private var asyncTask : taskEstados? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_load_estados)
@@ -42,7 +42,7 @@ class LoadEstados : AppCompatActivity() {
             if(asyncTask==null){
                 if(HttpEstados.hasConnection(this)){
                     if(asyncTask?.status != AsyncTask.Status.RUNNING){
-                        asyncTask = StatesTask()
+                        asyncTask = taskEstados()
                         asyncTask?.execute()
                     }
                 }else{
@@ -55,7 +55,7 @@ class LoadEstados : AppCompatActivity() {
     }
 
     @SuppressLint("StaticFieldLeak")
-    inner class StatesTask: AsyncTask<Void, Void, List<Estados?>>(){
+    inner class taskEstados: AsyncTask<Void, Void, List<Estados?>>(){
         override fun onPreExecute() {
             super.onPreExecute()
             showProgress(true)
