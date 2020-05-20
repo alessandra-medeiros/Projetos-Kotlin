@@ -104,40 +104,40 @@ class InfoEstados : AppCompatActivity() {
         var newString: String? = ""
         when {
             mes.substring(3,5) == "01" -> {
-                newString = "JANEIRO"
+                newString = "Janeiro"
             }
             mes.substring(3,5) == "02" -> {
-                newString = "FEVEREIRO"
+                newString = "Fevereiro"
             }
             mes.substring(3,5) == "03" -> {
-                newString = "MARÇO"
+                newString = "Março"
             }
             mes.substring(3,5) == "04" -> {
-                newString = "ABRIL"
+                newString = "Abril"
             }
             mes.substring(3,5) == "05" -> {
-                newString = "MAIO"
+                newString = "Maio"
             }
             mes.substring(3,5) == "06" -> {
-                newString = "JUNHO"
+                newString = "Junho"
             }
             mes.substring(3,5) == "07" -> {
-                newString = "JULHO"
+                newString = "Julho"
             }
             mes.substring(3,5) == "08" -> {
-                newString = "AGOSTO"
+                newString = "Agosto"
             }
             mes.substring(3,5) == "09" -> {
-                newString = "SETEMBRO"
+                newString = "Setembro"
             }
             mes.substring(3,5) == "10" -> {
-                newString = "OUTUBRO"
+                newString = "Outubro"
             }
             mes.substring(3,5) == "11" -> {
-                newString = "NOVEMBRO"
+                newString = "Novembro"
             }
             mes.substring(3,5) == "12" -> {
-                newString = "DEZEMBRO"
+                newString = "Dezembro"
             }
         }
         return newString
