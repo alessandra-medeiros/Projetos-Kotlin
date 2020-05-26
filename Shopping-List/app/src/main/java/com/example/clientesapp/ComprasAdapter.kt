@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.cliente_item.view.*
+import kotlinx.android.synthetic.main.compras_item.view.*
 
 class ComprasAdapter (private val compras: List<Compras>):
     RecyclerView.Adapter<ComprasAdapter.VH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        val v= LayoutInflater.from(parent.context).inflate(R.layout.cliente_item,parent,false)
+        val v= LayoutInflater.from(parent.context).inflate(R.layout.compras_item,parent,false)
         val vh = VH(v)
 
         vh.itemView.setOnClickListener{

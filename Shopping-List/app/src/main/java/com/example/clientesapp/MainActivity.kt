@@ -14,11 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         updateAdapter()
+
         btnAdd.setOnClickListener(View.OnClickListener {
             val it = Intent(this, SaveActivity::class.java)
             startActivity(it)
         })
         initRecyclerView()
+
         btnSearch.setOnClickListener {
             findAdapter(edtSearch.text.toString())
         }

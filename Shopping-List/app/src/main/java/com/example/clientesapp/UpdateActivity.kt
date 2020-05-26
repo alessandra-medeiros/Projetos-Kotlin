@@ -10,7 +10,7 @@ class UpdateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update)
 
-        val produto = intent.getParcelableExtra<Compras>("compra")
+        val produto = intent.getParcelableExtra<Compras>("compras")
         edtNome.setText(produto.quantidade.toString())
         edtQuantidade.setText(produto.quantidade.toString())
 
