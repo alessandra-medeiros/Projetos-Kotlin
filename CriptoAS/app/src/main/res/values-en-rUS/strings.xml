@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Barcelona Cripto</string>
+    <string name="criptomoeda">Cryptocurrency</string>
+    <string name="valor">Price</string>
+    <string name="quantidade">Quantity</string>
+    <string name="data">Date</string>
+    <string name="data_da_compra">Purchase date</string>
+    <string name="comprar">Buy</string>
+    <string name="variacao">Variation</string>
+    <string name="lucro">Profit</string>
+    <string name="remover">Remove</string>
+    <string name="adicionar_criptomoeda">Add cryptocurrency</string>
+    <string name="ver_lista_ativos">See list of assets</string>
+    <string name="escolha_moeda">Choose a currency</string>
+</resources>

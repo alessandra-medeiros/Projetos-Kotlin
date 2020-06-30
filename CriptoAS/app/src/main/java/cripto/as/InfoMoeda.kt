@@ -6,6 +6,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_info_moeda.*
 import kotlinx.android.synthetic.main.activity_info_moeda.txtNome
 import kotlinx.android.synthetic.main.activity_info_moeda.txtValor
+import kotlinx.android.synthetic.main.activity_adicionar_moeda.*
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
@@ -71,10 +72,9 @@ class InfoMoeda : AppCompatActivity() {
 
     fun variacao (vf: Double, vi: Double ): CharSequence? {
         val result = ((vf/vi)-1)*100
-        val variacao = result*100
         val df = DecimalFormat("#.##")
         df.roundingMode = RoundingMode.CEILING
-        return df.format(variacao)
+        return df.format(result)
     }
 
     fun total (total: Double): String {
@@ -84,14 +84,15 @@ class InfoMoeda : AppCompatActivity() {
         return df.format(result)
     }
 
-    fun lucro(qtd: Double, total: Double, preco:Double):String{
+    fun lucro (qtd: Double, total: Double, preco:Double):String{
         val result = qtd*preco
         val lucro = total-result
-        if(lucro<=total){
-            lucro*-1
-            return lucro.toString()
+        if(total<=result){
+            val aux = lucro*-1
+            return aux.toString()
         }else{
-            return lucro.toString()
+            val aux = lucro*-1
+            return aux.toString()
         }
     }
 }
